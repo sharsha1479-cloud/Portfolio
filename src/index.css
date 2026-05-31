@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply scroll-smooth;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ink text-slate-100 antialiased;
+    background:
+      linear-gradient(120deg, rgba(34, 211, 238, 0.1), transparent 32%),
+      linear-gradient(240deg, rgba(250, 204, 21, 0.08), transparent 38%),
+      linear-gradient(180deg, #07111f 0%, #0d1b2d 45%, #111827 100%);
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent;
+  }
+
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-xl border border-white/15 rounded-lg;
+  }
+
+  .glass-card {
+    @apply glass-effect p-6 shadow-lg shadow-black/20 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-accent via-primary to-secondary text-ink font-bold shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/40 transition-all duration-300 hover:-translate-y-1;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg border border-primary/50 text-primary hover:bg-primary/10 font-bold transition-all duration-300 hover:border-accent hover:text-accent;
+  }
+
+  .section-padding {
+    @apply py-20 px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-custom {
+    @apply max-w-6xl mx-auto;
+  }
+
+  .skill-badge {
+    @apply inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/15 bg-white/5 text-sm text-slate-200;
+  }
+}
+
+/* Smooth transitions */
+a, button {
+  @apply transition-all duration-300;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  @apply w-2 h-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-ink;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary rounded-full hover:bg-accent;
+}
+
+/* Glassmorphism gradient backgrounds */
+.gradient-1 {
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.12) 0%, rgba(163, 230, 53, 0.1) 100%);
+}
+
+.gradient-2 {
+  background: linear-gradient(135deg, rgba(251, 113, 133, 0.12) 0%, rgba(250, 204, 21, 0.1) 100%);
+}
+
+/* Floating animation */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Glow effect */
+.glow-primary {
+  box-shadow: 0 0 28px rgba(34, 211, 238, 0.25);
+}
+
+.glow-accent {
+  box-shadow: 0 0 28px rgba(163, 230, 53, 0.22);
+}
+
+/* Spotlight effect */
+.spotlight {
+  position: relative;
+  overflow: hidden;
+}
+
+.spotlight::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.28) 0%, transparent 70%);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.spotlight:hover::after {
+  opacity: 1;
+}
