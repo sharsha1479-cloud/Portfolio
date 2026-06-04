@@ -14,7 +14,7 @@ const Projects = () => {
     {
       title: "NearHub",
       description:
-        "AI-powered hyperlocal marketplace built across web and mobile, connecting nearby buyers and sellers with listings, discovery, deals, and location-based browsing.",
+        "Hyperlocal marketplace platform connecting nearby buyers and sellers through listings, local discovery, deals, and location-based browsing.",
       image: "bg-gradient-to-br from-orange-500/20 via-red-500/20 to-pink-500/20",
       features: [
         "Website + APK",

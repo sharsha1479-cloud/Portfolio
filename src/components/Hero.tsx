@@ -185,10 +185,10 @@ const Hero = () => {
             variants={itemVariants}
             className="mx-auto mb-5 max-w-2xl text-[15px] leading-relaxed text-slate-800 sm:text-base md:mb-9 md:text-xl lg:mx-0"
           >
-            As a Software Engineer, I build scalable web applications,
-            data-driven solutions, and modern digital products using React,
-            TypeScript, Node.js, Express.js, MySQL, Python, and AI-assisted
-            development practices.
+            Software Engineer with 1+ year of experience building scalable web
+            applications, digital products, and data-driven solutions using
+            React, TypeScript, Node.js, Express.js, MySQL, Python, and
+            AI-assisted development practices.
           </motion.p>
 
           <motion.p
