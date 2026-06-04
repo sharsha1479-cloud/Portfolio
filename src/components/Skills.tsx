@@ -85,11 +85,21 @@ const Skills = () => {
     },
     {
       title: "Deployment",
-      skills: ["Hostinger"],
+      skills: ["Hostinger", "Vercel"],
     },
     {
       title: "Integrations",
-      skills: ["Razorpay"],
+      skills: ["Razorpay", "WhatsApp"],
+    },
+    {
+      title: "Product & Collaboration",
+      skills: [
+        "Product Coordination",
+        "Requirement Gathering",
+        "Feature Planning",
+        "Stakeholder Communication",
+        "Agile Collaboration",
+      ],
     },
   ];
 
@@ -102,12 +112,12 @@ const Skills = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="mb-16"
+          className="mb-10 md:mb-16"
         >
-          <p className="text-sm font-bold uppercase tracking-[0.35em] text-accent">
+          <p className="text-xs font-bold uppercase tracking-[0.22em] text-accent sm:text-sm sm:tracking-[0.35em]">
             Toolkit
           </p>
-          <h2 className="mt-3 font-display text-4xl font-bold md:text-5xl">
+          <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl md:text-5xl">
             Skills & Technologies
           </h2>
           <div className="mt-5 h-1 w-24 bg-gradient-to-r from-primary to-accent" />
@@ -115,7 +125,7 @@ const Skills = () => {
 
         {/* Skills Categories */}
         <motion.div
-          className="grid md:grid-cols-2 gap-8"
+          className="grid gap-8 md:grid-cols-2"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -124,12 +134,12 @@ const Skills = () => {
           {skillCategories.map((category, idx) => (
             <motion.div key={idx} variants={cardVariants} className="space-y-4">
               {/* Category Title */}
-              <h3 className="mb-6 font-display text-2xl font-bold text-primary">
+              <h3 className="mb-4 font-display text-xl font-bold text-primary sm:mb-6 sm:text-2xl">
                 {category.title}
               </h3>
 
               {/* Skills Grid */}
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+              <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4">
                 {category.skills.map((skill, skillIdx) => {
                   const Icon = skill.icon;
                   return (
@@ -137,7 +147,7 @@ const Skills = () => {
                       key={skillIdx}
                       whileHover={{ scale: 1.1, rotate: 5 }}
                       whileTap={{ scale: 0.95 }}
-                      className="glass-card group flex min-h-32 cursor-pointer flex-col items-center justify-center p-4"
+                      className="glass-card group flex min-h-28 cursor-pointer flex-col items-center justify-center p-3 sm:min-h-32 sm:p-4"
                     >
                       <motion.div
                         animate={{ y: [0, -5, 0] }}
@@ -145,12 +155,12 @@ const Skills = () => {
                         className="mb-3"
                       >
                         <Icon
-                          size={40}
+                          size={36}
                           style={{ color: skill.color }}
                           className="group-hover:drop-shadow-lg transition-all"
                         />
                       </motion.div>
-                      <p className="text-center text-sm font-semibold text-slate-300 transition-colors group-hover:text-primary">
+                      <p className="text-center text-xs font-semibold leading-snug text-slate-300 transition-colors group-hover:text-primary sm:text-sm">
                         {skill.name}
                       </p>
                     </motion.div>
@@ -167,13 +177,13 @@ const Skills = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
-          className="mt-16 glass-card p-8"
+          className="mt-10 glass-card p-5 sm:p-8 md:mt-16"
         >
-          <h3 className="mb-6 font-display text-xl font-bold text-primary">Analytics, Libraries & Deployment</h3>
+          <h3 className="mb-5 font-display text-lg font-bold text-primary sm:mb-6 sm:text-xl">Additional Skills</h3>
           <div className="grid gap-6 md:grid-cols-2">
             {additionalSkillGroups.map((group) => (
               <div key={group.title}>
-                <h4 className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-gold">
+                <h4 className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-gold sm:text-sm sm:tracking-[0.2em]">
                   {group.title}
                 </h4>
                 <div className="flex flex-wrap gap-3">

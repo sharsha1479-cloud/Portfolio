@@ -4,16 +4,20 @@ import { Award, Briefcase } from "lucide-react";
 const Experience = () => {
   const experiences = [
     {
-      title: "Full-Stack Developer",
+      title: "Software Engineer",
       company: "Synvide Business Solutions",
-      period: "Nov 2025 - Present",
+      period: "May 2025 - Present",
       description:
-        "Worked as a Full-Stack Developer on product-based applications, contributing to frontend development, backend integrations, database operations, and deployment workflows.",
+        "Worked on product-based web and mobile applications, contributing to frontend development, backend integrations, testing, deployment workflows, and product coordination. Progressed from frontend-focused development responsibilities to supporting product planning, requirement discussions, feature prioritization, stakeholder communication, and development coordination.",
       responsibilities: [
         "Developed scalable UI features using React.js with TypeScript",
         "Styled responsive interfaces using Tailwind CSS",
-        "Collaborated with the team using GitHub for version control",
-        "Built reusable, type-safe components and product pages",
+        "Built reusable, type-safe components and integrated backend APIs",
+        "Performed testing, bug validation, and quality assurance activities",
+        "Collaborated with cross-functional teams using GitHub and AI-assisted development tools",
+        "Participated in requirement gathering, feature discussions, and release planning",
+        "Coordinated development activities, tracked deliverables, and aligned product requirements with business objectives",
+        "Contributed to product management activities including feature planning, documentation review, and stakeholder communication",
       ],
       projects: ["Oshoppe", "OPD365", "NearHub"],
       icon: Briefcase,
@@ -56,12 +60,12 @@ const Experience = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="mb-16"
+          className="mb-10 md:mb-16"
         >
-          <p className="text-sm font-bold uppercase tracking-[0.35em] text-accent">
+          <p className="text-xs font-bold uppercase tracking-[0.22em] text-accent sm:text-sm sm:tracking-[0.35em]">
             Work
           </p>
-          <h2 className="mt-3 font-display text-4xl font-bold md:text-5xl">
+          <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl md:text-5xl">
             Experience
           </h2>
           <div className="mt-5 h-1 w-24 bg-gradient-to-r from-primary to-accent" />
@@ -76,14 +80,14 @@ const Experience = () => {
         >
           <div className="absolute bottom-0 left-6 top-0 hidden w-1 bg-gradient-to-b from-primary via-accent to-secondary md:block" />
 
-          <div className="space-y-10">
+          <div className="space-y-6 md:space-y-10">
             {experiences.map((exp) => {
               const Icon = exp.icon;
               return (
                 <motion.div
                   key={exp.title}
                   variants={cardVariants}
-                  className="grid items-start gap-8 md:grid-cols-[5rem_1fr]"
+                  className="grid items-start gap-5 md:grid-cols-[5rem_1fr] md:gap-8"
                 >
                   <div className="hidden justify-start md:flex">
                     <motion.div
@@ -95,12 +99,12 @@ const Experience = () => {
                   </div>
 
                   <motion.article whileHover={{ scale: 1.01 }} className="glass-card">
-                    <div className="mb-4 flex items-start gap-4">
+                    <div className="mb-4 flex items-start gap-3 sm:gap-4">
                       <div className="md:hidden">
-                        <Icon size={32} className="text-primary" />
+                        <Icon size={28} className="text-primary sm:size-8" />
                       </div>
                       <div>
-                        <h3 className="font-display text-2xl font-bold text-primary">
+                        <h3 className="font-display text-xl font-bold leading-snug text-primary sm:text-2xl">
                           {exp.title}
                         </h3>
                         <p className="font-semibold text-slate-300">{exp.company}</p>
@@ -108,7 +112,7 @@ const Experience = () => {
                       </div>
                     </div>
 
-                    <p className="mb-5 text-slate-300">{exp.description}</p>
+                    <p className="mb-5 text-sm leading-relaxed text-slate-300 sm:text-base">{exp.description}</p>
 
                     <div className="mb-5">
                       <h4 className="mb-2 text-sm font-semibold text-gold">

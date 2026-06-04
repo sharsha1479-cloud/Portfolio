@@ -19,8 +19,13 @@ const Navbar = () => {
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
       setIsOpen(false);
+      const offset = window.innerWidth < 768 ? 72 : 88;
+      const top = element.getBoundingClientRect().top + window.scrollY - offset;
+
+      window.requestAnimationFrame(() => {
+        window.scrollTo({ top, behavior: "smooth" });
+      });
     }
   };
 
@@ -31,20 +36,24 @@ const Navbar = () => {
       transition={{ duration: 0.5 }}
       className="fixed top-0 z-50 w-full border-b border-white/10 bg-ink/80 backdrop-blur-xl"
     >
-      <div className="container-custom px-4 py-4">
+      <div className="container-custom px-4 py-3 md:py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <motion.div
+          <motion.button
+            type="button"
             whileHover={{ scale: 1.05 }}
             className="flex items-center gap-3"
+            onClick={() => scrollToSection("#hero")}
+            aria-label="Go to top"
           >
-            <div className="flex h-11 w-11 items-center justify-center rounded-full border border-primary/40 bg-gradient-to-br from-slate-950 via-cyan-950 to-emerald-900 shadow-lg shadow-primary/20">
-              <UserRound size={22} className="text-white" />
+            <div className="flex h-10 w-10 items-center justify-center rounded-full border border-primary/40 bg-gradient-to-br from-slate-950 via-cyan-950 to-emerald-900 shadow-lg shadow-primary/20 md:h-11 md:w-11">
+              <UserRound size={21} className="text-white md:size-[22px]" />
             </div>
-            <span className="font-display text-lg font-bold text-slate-100">
-              Portfolio
+            <span className="font-display text-base font-bold text-slate-100 md:text-lg">
+              <span className="md:hidden">Harsha</span>
+              <span className="hidden md:inline">Portfolio</span>
             </span>
-          </motion.div>
+          </motion.button>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-5">
@@ -77,7 +86,8 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="text-primary transition-colors hover:text-accent md:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-primary transition-colors hover:text-accent md:hidden"
+            aria-label={isOpen ? "Close menu" : "Open menu"}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -93,17 +103,25 @@ const Navbar = () => {
           transition={{ duration: 0.3 }}
           className="overflow-hidden md:hidden"
         >
-          <div className="mt-4 flex flex-col gap-4 border-t border-white/10 pt-4">
+          <div className="mt-3 grid grid-cols-2 gap-2 border-t border-white/10 pt-3">
+            <button
+              type="button"
+              onClick={() => scrollToSection("#projects")}
+              className="col-span-2 rounded-lg bg-gradient-to-r from-accent via-primary to-secondary px-3 py-2.5 text-center text-sm font-bold text-ink shadow-lg shadow-primary/15"
+            >
+              View Featured Projects
+            </button>
             {navItems.map((item) => (
               <button
+                type="button"
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-left text-slate-300 transition-colors hover:text-accent"
+                className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-left text-sm font-semibold text-slate-300 transition-colors hover:border-primary/40 hover:text-accent"
               >
                 {item.name}
               </button>
             ))}
-            <a href="/resume-harshavardhan.pdf" download className="btn-secondary w-full text-center text-sm">
+            <a href="/resume-harshavardhan.pdf" download className="btn-secondary col-span-2 w-full text-center text-sm">
               Resume
             </a>
           </div>

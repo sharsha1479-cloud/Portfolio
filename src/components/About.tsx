@@ -35,19 +35,19 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="mb-16"
+          className="mb-10 md:mb-16"
         >
-          <p className="text-sm font-bold uppercase tracking-[0.35em] text-accent">
+          <p className="text-xs font-bold uppercase tracking-[0.22em] text-accent sm:text-sm sm:tracking-[0.35em]">
             Profile
           </p>
-          <h2 className="mt-3 font-display text-4xl font-bold md:text-5xl">
+          <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl md:text-5xl">
             About Me
           </h2>
           <div className="mt-5 h-1 w-24 bg-gradient-to-r from-primary to-accent" />
         </motion.div>
 
         {/* Content Grid */}
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid items-center gap-9 md:grid-cols-2 md:gap-12">
           {/* Left Column - Text */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -55,14 +55,14 @@ const About = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <p className="mb-6 text-lg leading-relaxed text-slate-300">
-              I am a B.Tech graduate in Data Science with hands-on experience
-              as a{" "}
-              <span className="font-semibold text-primary">Full-Stack Developer at Synvide Business Solutions</span>, building scalable web applications, product-focused solutions, and data-driven systems.
+            <p className="mb-5 text-base leading-relaxed text-slate-300 sm:text-lg md:mb-6">
+              I am a B.Tech graduate in Data Science with professional
+              experience as a{" "}
+              <span className="font-semibold text-primary">Software Engineer at Synvide Business Solutions</span>, contributing to product-based web and mobile applications. My experience spans frontend development, backend integrations, testing, deployment workflows, and product coordination.
             </p>
 
-            <p className="mb-8 text-lg leading-relaxed text-slate-300">
-              I build full-stack web applications using React.js, TypeScript, Tailwind CSS, Node.js, Express.js, and MySQL, with experience in Razorpay payments, Hostinger deployment, Power BI dashboards, and data-driven project work.
+            <p className="mb-7 text-base leading-relaxed text-slate-300 sm:text-lg md:mb-8">
+              Over the course of my role, I progressed from frontend-focused development to contributing to product planning, requirement discussions, feature prioritization, stakeholder communication, and development coordination. I build scalable web applications using React.js, TypeScript, Tailwind CSS, Node.js, Express.js, and MySQL, while leveraging AI-assisted development tools to deliver impactful digital products.
             </p>
 
             {/* Skills Grid */}
@@ -71,16 +71,16 @@ const About = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="grid grid-cols-1 sm:grid-cols-2 gap-4"
+              className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4"
             >
               {skills.map((skill, index) => (
                 <motion.div
                   key={index}
                   variants={itemVariants}
-                  className="flex items-center gap-3"
+                  className="flex items-start gap-3"
                 >
                   <CheckCircle size={20} className="flex-shrink-0 text-accent" />
-                  <span className="text-slate-300">{skill}</span>
+                  <span className="text-sm leading-relaxed text-slate-300 sm:text-base">{skill}</span>
                 </motion.div>
               ))}
             </motion.div>
@@ -92,23 +92,23 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="grid grid-cols-2 gap-6"
+            className="grid grid-cols-2 gap-3 sm:gap-6"
           >
             {[
               { number: "3+", label: "Product Applications" },
-              { number: "5+", label: "Projects Built" },
+              { number: "5+", label: "Projects Delivered" },
+              { number: "1+", label: "Years Experience" },
               { number: "84.17%", label: "ML Accuracy" },
-              { number: "B.Tech", label: "Data Science" },
             ].map((stat, index) => (
               <motion.div
                 key={index}
                 whileHover={{ scale: 1.05 }}
                 className="glass-card text-center"
               >
-                <h3 className="mb-2 font-display text-3xl font-bold gradient-text md:text-4xl">
+                <h3 className="mb-2 font-display text-2xl font-bold gradient-text sm:text-3xl md:text-4xl">
                   {stat.number}
                 </h3>
-                <p className="text-sm text-slate-400">{stat.label}</p>
+                <p className="text-xs leading-snug text-slate-400 sm:text-sm">{stat.label}</p>
               </motion.div>
             ))}
           </motion.div>

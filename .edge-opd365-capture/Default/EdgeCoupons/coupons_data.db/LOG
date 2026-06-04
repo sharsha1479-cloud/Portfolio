@@ -1,0 +1,5 @@
+2026/06/04-21:53:10.211 417c Creating DB D:\Portifolio\.edge-opd365-capture\Default\EdgeCoupons/coupons_data.db since it was missing.
+2026/06/04-21:53:10.228 417c Reusing MANIFEST D:\Portifolio\.edge-opd365-capture\Default\EdgeCoupons/coupons_data.db/MANIFEST-000001
+2026/06/04-21:54:34.762 1944 Level-0 table #5: started
+2026/06/04-21:54:34.950 1944 Level-0 table #5: 682672 bytes OK
+2026/06/04-21:54:34.960 1944 Delete type=0 #3

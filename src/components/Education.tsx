@@ -34,17 +34,17 @@ const Education = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="mb-12"
+          className="mb-10 md:mb-12"
         >
-          <p className="text-sm font-bold uppercase tracking-[0.35em] text-accent">
+          <p className="text-xs font-bold uppercase tracking-[0.22em] text-accent sm:text-sm sm:tracking-[0.35em]">
             Learning Path
           </p>
-          <h2 className="mt-3 font-display text-4xl font-bold md:text-5xl">
+          <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl md:text-5xl">
             Education
           </h2>
         </motion.div>
 
-        <div className="grid gap-5 md:grid-cols-3">
+        <div className="grid gap-4 sm:gap-5 md:grid-cols-3">
           {education.map((item, index) => (
             <motion.article
               key={item.school}
@@ -59,7 +59,7 @@ const Education = () => {
                 {index === 0 ? <GraduationCap size={26} /> : <BookOpen size={24} />}
               </div>
               <p className="mb-2 text-sm font-semibold text-gold">{item.period}</p>
-              <h3 className="font-display text-xl font-bold text-white">{item.school}</h3>
+              <h3 className="font-display text-lg font-bold leading-snug text-white sm:text-xl">{item.school}</h3>
               <p className="mt-2 font-semibold text-primary">{item.course}</p>
               <p className="mt-3 text-sm font-bold text-accent">{item.score}</p>
               <p className="mt-4 text-sm leading-relaxed text-slate-300">{item.detail}</p>

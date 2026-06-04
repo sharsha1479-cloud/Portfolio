@@ -38,19 +38,19 @@ const Certifications = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="mb-16"
+          className="mb-10 md:mb-16"
         >
-          <p className="text-sm font-bold uppercase tracking-[0.35em] text-accent">
+          <p className="text-xs font-bold uppercase tracking-[0.22em] text-accent sm:text-sm sm:tracking-[0.35em]">
             Credentials
           </p>
-          <h2 className="mt-3 font-display text-4xl font-bold md:text-5xl">
+          <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl md:text-5xl">
             Certifications
           </h2>
           <div className="mt-5 h-1 w-24 bg-gradient-to-r from-primary to-accent" />
         </motion.div>
 
         <motion.div
-          className="grid gap-8 md:grid-cols-2"
+          className="grid gap-5 sm:gap-8 md:grid-cols-2"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -67,12 +67,12 @@ const Certifications = () => {
               >
                 <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary via-gold to-secondary" />
                 <div className="relative z-10">
-                  <div className="mb-5 flex items-start gap-4">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-primary/15 text-primary transition-colors group-hover:bg-accent/20 group-hover:text-accent">
-                      <Icon size={30} />
+                  <div className="mb-5 flex items-start gap-3 sm:gap-4">
+                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-primary/15 text-primary transition-colors group-hover:bg-accent/20 group-hover:text-accent sm:h-14 sm:w-14">
+                      <Icon size={26} className="sm:size-[30px]" />
                     </div>
                     <div>
-                      <h3 className="font-display text-xl font-bold text-primary">
+                      <h3 className="font-display text-lg font-bold leading-snug text-primary sm:text-xl">
                         {cert.title}
                       </h3>
                       <p className="text-sm font-semibold text-slate-400">{cert.issuer}</p>
@@ -98,7 +98,7 @@ const Certifications = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
-          className="mt-12 glass-card text-center"
+          className="mt-8 glass-card text-center md:mt-12"
         >
           <Award className="mx-auto mb-4 text-gold" size={28} />
           <p className="text-slate-300">

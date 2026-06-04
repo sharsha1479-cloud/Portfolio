@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import { SiReact, SiTypescript, SiTailwindcss, SiNodedotjs, SiExpress, SiMysql, SiPython, SiVite, SiDjango, SiPostgresql } from "react-icons/si";
+import bloodDonorPredictionCover from "../assets/blood-donor-prediction-cover.png";
 import mbrFashionHubCover from "../assets/mbr-fashion-hub-cover.png";
+import nearhubCover from "../assets/nearhub-cover.png";
+import opd365Cover from "../assets/opd365-cover-rendered.png";
 
 const Projects = () => {
   const websiteCover = (url: string) =>
@@ -9,22 +12,26 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "NearHub APK",
+      title: "NearHub",
       description:
-        "Hyperlocal marketplace mobile application connecting nearby buyers and sellers with real-time product discovery.",
+        "AI-powered hyperlocal marketplace built across web and mobile, connecting nearby buyers and sellers with listings, discovery, deals, and location-based browsing.",
       image: "bg-gradient-to-br from-orange-500/20 via-red-500/20 to-pink-500/20",
       features: [
+        "Website + APK",
         "Nearby discovery",
-        "Product discovery",
-        "Buyer and seller flows",
-        "User engagement",
+        "Create listings",
+        "Deals and search",
       ],
       tech: [
         { name: "React", icon: SiReact },
+        { name: "TypeScript", icon: SiTypescript },
+        { name: "Tailwind", icon: SiTailwindcss },
         { name: "Node.js", icon: SiNodedotjs },
       ],
-      liveLink: "https://play.google.com/store/apps/details?id=com.synvide.nearhub",
-      badge: "Mobile App",
+      liveLink: "https://nearhub.in",
+      secondaryLink: "https://play.google.com/store/apps/details?id=com.synvide.nearhub",
+      coverUrl: nearhubCover,
+      badge: "Web + APK",
     },
     {
       title: "MBR Fashion Hub",
@@ -68,12 +75,12 @@ const Projects = () => {
         { name: "PostgreSQL", icon: SiPostgresql },
       ],
       liveLink: "https://opd365.com",
-      coverUrl: websiteCover("https://opd365.com"),
+      coverUrl: opd365Cover,
     },
     {
       title: "Oshoppe",
       description:
-        "Dynamic e-commerce platform developed during internship with complete product catalog and order management.",
+        "Dynamic e-commerce platform developed as part of product-based software engineering experience, featuring reusable components, scalable architecture, and modern frontend development practices.",
       image: "bg-gradient-to-br from-green-500/20 via-cyan-500/20 to-blue-500/20",
       features: [
         "Product listings",
@@ -107,6 +114,7 @@ const Projects = () => {
         { name: "Python", icon: SiPython },
       ],
       liveLink: "#",
+      coverUrl: bloodDonorPredictionCover,
       badge: "ML Project",
     },
   ];
@@ -133,20 +141,20 @@ const Projects = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="mb-16"
+          className="mb-10 md:mb-16"
         >
-          <p className="text-sm font-bold uppercase tracking-[0.35em] text-accent">
-            Selected Work
+          <p className="text-xs font-bold uppercase tracking-[0.22em] text-accent sm:text-sm sm:tracking-[0.35em]">
+            Portfolio Highlights
           </p>
-          <h2 className="mt-3 font-display text-4xl font-bold md:text-5xl">
-            Selected Projects
+          <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl md:text-5xl">
+            Featured Projects
           </h2>
           <div className="mt-5 h-1 w-24 bg-gradient-to-r from-primary to-accent" />
         </motion.div>
 
         {/* Projects Grid */}
         <motion.div
-          className="grid md:grid-cols-2 gap-8"
+          className="grid gap-5 sm:gap-8 md:grid-cols-2"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -161,7 +169,7 @@ const Projects = () => {
             >
               {/* Project Image Background */}
               <div
-                className={`${project.image} h-56 relative overflow-hidden bg-slate-900`}
+                className={`${project.image} relative h-44 overflow-hidden bg-slate-900 sm:h-56`}
               >
                 {project.coverUrl ? (
                   <img
@@ -180,8 +188,8 @@ const Projects = () => {
                 
                 {/* Badge */}
                 {project.badge && (
-                  <div className="absolute top-4 right-4">
-                    <span className="rounded-full bg-accent px-3 py-1 text-xs font-bold text-ink backdrop-blur-sm">
+                  <div className="absolute right-3 top-3 sm:right-4 sm:top-4">
+                    <span className="rounded-full bg-accent px-2.5 py-1 text-[11px] font-bold text-ink backdrop-blur-sm sm:px-3 sm:text-xs">
                       {project.badge}
                     </span>
                   </div>
@@ -189,9 +197,9 @@ const Projects = () => {
               </div>
 
               {/* Content */}
-              <div className="p-6 flex flex-col flex-grow">
+              <div className="flex flex-grow flex-col p-5 sm:p-6">
                 {/* Title & Description */}
-                <h3 className="mb-2 font-display text-2xl font-bold text-primary">
+                <h3 className="mb-2 font-display text-xl font-bold leading-snug text-primary sm:text-2xl">
                   {project.title}
                 </h3>
                 <p className="mb-4 flex-grow text-sm leading-relaxed text-slate-300">
@@ -215,8 +223,8 @@ const Projects = () => {
                 </div>
 
                 {/* Tech Stack */}
-                <div className="mb-6">
-                  <div className="flex flex-wrap gap-3">
+                <div className="mb-5 sm:mb-6">
+                  <div className="flex flex-wrap gap-2.5 sm:gap-3">
                     {project.tech.map((tech, tidx) => {
                       const TechIcon = tech.icon;
                       return (
@@ -248,7 +256,19 @@ const Projects = () => {
                       className="btn-primary flex-1 text-sm"
                     >
                       <ExternalLink size={16} />
-                      Visit
+                      Website
+                    </motion.a>
+                  )}
+                  {"secondaryLink" in project && project.secondaryLink && (
+                    <motion.a
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      href={project.secondaryLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-secondary flex-1 text-sm"
+                    >
+                      APK
                     </motion.a>
                   )}
                 </div>

@@ -14,8 +14,8 @@ const Footer = () => {
 
   return (
     <footer className="relative border-t border-white/10 bg-ink/90 backdrop-blur-xl">
-      <div className="container-custom px-4 py-12">
-        <div className="mb-8 grid gap-8 md:grid-cols-3">
+      <div className="container-custom px-4 py-10 md:py-12">
+        <div className="mb-8 grid gap-7 md:grid-cols-3 md:gap-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -28,8 +28,8 @@ const Footer = () => {
               </div>
               <span className="font-display text-lg font-bold gradient-text">SHV</span>
             </div>
-            <p className="text-sm text-slate-400">
-              Software engineer building responsive web applications and data-driven products.
+            <p className="max-w-sm text-sm leading-relaxed text-slate-400">
+              Software Engineer building scalable web applications, digital products, and data-driven solutions.
             </p>
           </motion.div>
 
@@ -41,7 +41,7 @@ const Footer = () => {
             className="md:text-center"
           >
             <h4 className="mb-4 font-semibold text-white">Quick Links</h4>
-            <ul className="space-y-2 text-sm text-slate-400">
+            <ul className="grid grid-cols-2 gap-2 text-sm text-slate-400 sm:block sm:space-y-2">
               {[
                 { name: "About", href: "#about" },
                 { name: "Education", href: "#education" },
@@ -49,7 +49,7 @@ const Footer = () => {
                 { name: "Contact", href: "#contact" },
               ].map((link) => (
                 <li key={link.name}>
-                  <a href={link.href} className="transition-colors hover:text-accent">
+                  <a href={link.href} className="block rounded-lg border border-white/10 bg-white/5 px-3 py-2 transition-colors hover:text-accent sm:border-0 sm:bg-transparent sm:p-0">
                     {link.name}
                   </a>
                 </li>
@@ -94,7 +94,7 @@ const Footer = () => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-center text-sm text-slate-400 md:text-left"
+            className="text-center text-xs leading-relaxed text-slate-400 sm:text-sm md:text-left"
           >
             Copyright 2026 Saneda Harsha Vardhan. All rights reserved.
           </motion.p>
@@ -104,7 +104,7 @@ const Footer = () => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: true }}
-            className="text-center text-sm text-slate-400"
+            className="text-center text-xs leading-relaxed text-slate-400 sm:text-sm"
           >
             Built with <span className="font-semibold text-primary">React</span>,{" "}
             <span className="font-semibold text-accent">TypeScript</span>, and{" "}
