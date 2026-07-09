@@ -29,7 +29,7 @@ const Footer = () => {
               <span className="font-display text-lg font-bold gradient-text">SHV</span>
             </div>
             <p className="max-w-sm text-sm leading-relaxed text-slate-400">
-              Software Engineer building scalable web applications, digital products, and data-driven solutions.
+              Software Engineer and Business Analyst building scalable, data-driven digital products and business solutions.
             </p>
           </motion.div>
 

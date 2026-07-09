@@ -6,8 +6,8 @@ import profilePortrait from "../assets/profile-portrait.png";
 
 const Hero = () => {
   const [displayText, setDisplayText] = useState("");
-  const primaryRole = "Software Engineer | Full-Stack Developer | ";
-  const secondaryRole = "Data Analyst";
+  const primaryRole = "Software Engineer | ";
+  const secondaryRole = "Business Analyst";
   const fullText = `${primaryRole}${secondaryRole}`;
   const [index, setIndex] = useState(0);
 
@@ -152,10 +152,9 @@ const Hero = () => {
             <motion.div variants={itemVariants} className="mb-5 min-h-0 text-center md:mb-7 md:min-h-14 lg:w-full lg:text-center">
               <div className="flex flex-col items-center gap-1.5 text-lg font-bold leading-snug text-slate-800 sm:hidden">
                 <span>Software Engineer</span>
-                <span className="text-cyan-800">Full-Stack Developer</span>
-                <span>Data Analyst</span>
+                <span className="text-cyan-800">Business Analyst</span>
               </div>
-              <div className="hidden text-lg font-bold leading-snug text-slate-800 sm:inline-block sm:text-xl md:text-2xl">
+              <div className="hidden whitespace-nowrap text-lg font-bold leading-snug text-slate-800 sm:inline-block sm:text-xl md:text-2xl">
                 <span>
                   {primaryDisplayText}
                   {index < primaryRole.length && (
@@ -163,7 +162,7 @@ const Hero = () => {
                   )}
                 </span>
                 {(secondaryDisplayText || index >= primaryRole.length) && (
-                  <span className="mt-1 block text-center">
+                  <span>
                     {secondaryDisplayText}
                     {index >= primaryRole.length && index < fullText.length && (
                       <span className="animate-pulse text-slate-700">|</span>
@@ -185,10 +184,12 @@ const Hero = () => {
             variants={itemVariants}
             className="mx-auto mb-5 max-w-2xl text-[15px] leading-relaxed text-slate-800 sm:text-base md:mb-9 md:text-xl lg:mx-0"
           >
-            Software Engineer with 1+ year of experience building scalable web
-            applications, digital products, and data-driven solutions using
-            React, TypeScript, Node.js, Express.js, MySQL, Python, and
-            AI-assisted development practices.
+            Software Engineer and Business Analyst with 1+ year of experience
+            in product-based development, business analysis, and product
+            delivery. Experienced in frontend development, backend API
+            integrations, AI-assisted development using GitHub Copilot, manual
+            testing, requirement analysis, and cross-functional collaboration to
+            deliver scalable, data-driven solutions.
           </motion.p>
 
           <motion.p
@@ -287,8 +288,8 @@ const Hero = () => {
           </div>
 
           <div className="relative mt-6 hidden w-full rounded-lg border border-cyan-100/80 bg-gradient-to-br from-white via-slate-50 to-cyan-50/80 p-4 text-center shadow-xl shadow-cyan-950/10 backdrop-blur-2xl sm:mt-8 sm:p-5 lg:block">
-            <p className="font-display text-xl font-bold text-slate-950 sm:text-2xl">Software Engineer</p>
-            <p className="mt-1 text-sm font-medium text-slate-600">React, TypeScript, Node.js, SQL</p>
+            <p className="font-display text-xl font-bold text-slate-950 sm:text-2xl">Software Engineer | Business Analyst</p>
+            <p className="mt-1 text-sm font-medium text-slate-600">React, TypeScript, SQL, Power BI</p>
             <div className="mt-4 grid grid-cols-2 gap-2 text-xs sm:mt-5 sm:grid-cols-4 sm:gap-3 sm:text-sm">
               {profileSkills.map((item) => (
                 <span

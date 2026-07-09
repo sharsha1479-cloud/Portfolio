@@ -111,7 +111,8 @@ const Contact = () => {
           </h2>
           <div className="mt-5 h-1 w-24 bg-gradient-to-r from-primary to-accent" />
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-slate-300 sm:mt-6 sm:text-lg">
-            Open to Software Engineer, Full-Stack Developer, Frontend Developer, and product-focused engineering opportunities.
+            Open to Software Engineer, Business Analyst, Product Analyst,
+            Frontend Developer, and Product-focused Engineering opportunities.
           </p>
         </motion.div>
 

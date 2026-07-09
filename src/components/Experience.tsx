@@ -6,20 +6,49 @@ const Experience = () => {
     {
       title: "Software Engineer",
       company: "Synvide Business Solutions",
-      period: "May 2025 - Present",
+      period: "June 2025 - Present",
       description:
-        "Worked on product-based web and mobile applications, contributing to frontend development, backend integrations, testing, deployment workflows, and product coordination. Progressed from frontend-focused development responsibilities to supporting product planning, requirement discussions, feature prioritization, stakeholder communication, and development coordination.",
+        "Product-based software engineering and business analysis role across frontend development, backend API integrations, product planning, manual testing, business data analysis, and product delivery.",
       responsibilities: [
-        "Developed scalable UI features using React.js with TypeScript",
-        "Styled responsive interfaces using Tailwind CSS",
-        "Built reusable, type-safe components and integrated backend APIs",
-        "Performed testing, bug validation, and quality assurance activities",
-        "Collaborated with cross-functional teams using GitHub and AI-assisted development tools",
-        "Participated in requirement gathering, feature discussions, and release planning",
-        "Coordinated development activities, tracked deliverables, and aligned product requirements with business objectives",
-        "Contributed to product management activities including feature planning, documentation review, and stakeholder communication",
+        "Started as a Frontend Developer, developing scalable web applications using React.js, TypeScript, and Tailwind CSS.",
+        "Built reusable UI components, integrated backend APIs, and managed frontend-backend data flow.",
+        "Utilized GitHub Copilot and AI-assisted development tools to improve development efficiency and code quality.",
+        "Performed manual testing, bug validation, and quality assurance to ensure application reliability.",
+        "Transitioned into a Business Analyst role within the Product Management team, gathering and analyzing business requirements and collaborating with cross-functional stakeholders.",
+        "Leveraged SQL, Power BI, and Microsoft Excel to analyze business data, create reports and dashboards, generate actionable insights, and support product decision-making.",
+        "Contributed to product planning, requirement documentation, release coordination, and aligning product features with business objectives.",
       ],
-      projects: ["Oshoppe", "OPD365", "NearHub"],
+      products: [
+        {
+          name: "Oshoppe",
+          website: "https://oshoppe.in",
+          description:
+            "Developed reusable React components, implemented e-commerce frontend features, and integrated REST APIs to deliver seamless user experiences.",
+          highlights: [],
+        },
+        {
+          name: "OPD365",
+          website: "https://opd365.com",
+          description:
+            "Developed healthcare workflow modules, scalable frontend features, and integrated backend APIs to streamline clinical workflows.",
+          highlights: [],
+        },
+        {
+          name: "NearHub",
+          website: "https://nearhub.in",
+          androidApp:
+            "https://play.google.com/store/apps/details?id=com.synvide.nearhub",
+          description:
+            "Developed and enhanced a hyperlocal marketplace platform connecting nearby buyers and sellers.",
+          highlights: [
+            "UI/UX implementation",
+            "Backend API integrations",
+            "Manual testing",
+            "Product planning",
+            "Feature coordination",
+          ],
+        },
+      ],
       icon: Briefcase,
     },
     {
@@ -27,14 +56,14 @@ const Experience = () => {
       company: "Datavalley India Pvt Ltd",
       period: "Mar 2024 - Jul 2024",
       description:
-        "Performed data preprocessing, feature selection, model building, and dashboard creation for data-driven insights.",
+        "Worked on data science and analytics workflows including data preprocessing, exploratory analysis, feature selection, machine learning model building, visualization, and dashboard creation.",
       responsibilities: [
-        "Used Python for preprocessing and model building",
-        "Worked with NumPy, Pandas, Matplotlib, and Scikit-learn",
-        "Built Power BI dashboards for insights and reporting",
-        "Supported data visualization and analysis workflows",
+        "Used Python, Pandas, NumPy, Matplotlib, and Scikit-learn for preprocessing, analysis, and model development.",
+        "Performed feature selection and supported machine learning model evaluation.",
+        "Created Power BI dashboards and reports for data-driven insights.",
+        "Supported data visualization, documentation, and analytics workflows.",
       ],
-      projects: [],
+      products: [],
       icon: Award,
     },
   ];
@@ -131,16 +160,38 @@ const Experience = () => {
                       </ul>
                     </div>
 
-                    {exp.projects.length > 0 && (
+                    {exp.products.length > 0 && (
                       <div>
                         <h4 className="mb-2 text-sm font-semibold text-gold">
-                          Projects
+                          Products Worked On
                         </h4>
-                        <div className="flex flex-wrap gap-2">
-                          {exp.projects.map((project) => (
-                            <span key={project} className="skill-badge text-xs">
-                              {project}
-                            </span>
+                        <div className="space-y-4">
+                          {exp.products.map((product) => (
+                            <div key={product.name}>
+                              <p className="text-sm font-semibold text-slate-300">
+                                {product.name}
+                              </p>
+                              <p className="text-sm text-slate-400">
+                                Website: {product.website}
+                              </p>
+                              {product.androidApp && (
+                                <p className="text-sm text-slate-400">
+                                  Android App: {product.androidApp}
+                                </p>
+                              )}
+                              <p className="mt-1 text-sm leading-relaxed text-slate-400">
+                                {product.description}
+                              </p>
+                              {product.highlights.length > 0 && (
+                                <div className="mt-2 flex flex-wrap gap-2">
+                                  {product.highlights.map((highlight) => (
+                                    <span key={highlight} className="skill-badge text-xs">
+                                      {highlight}
+                                    </span>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
                           ))}
                         </div>
                       </div>

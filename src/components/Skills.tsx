@@ -1,38 +1,46 @@
 import { motion } from "framer-motion";
-import { BrainCircuit, Bug, MessageSquareText, WandSparkles } from "lucide-react";
+import { FaFileExcel, FaMicrosoft } from "react-icons/fa";
 import {
-  SiReact,
-  SiTypescript,
-  SiNodedotjs,
   SiExpress,
-  SiMysql,
-  SiPostgresql,
-  SiTailwindcss,
-  SiVite,
+  SiGit,
   SiGithub,
-  SiPython,
-  SiJavascript,
+  SiGithubcopilot,
+  SiHostinger,
+  SiMysql,
+  SiNodedotjs,
+  SiNumpy,
+  SiPandas,
+  SiPostgresql,
+  SiReact,
+  SiTailwindcss,
+  SiTypescript,
+  SiVite,
 } from "react-icons/si";
+import { TbApi, TbBrandVscode, TbChartLine, TbSql } from "react-icons/tb";
 
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Frontend",
+      title: "Programming Languages",
+      skills: [
+        { name: "SQL", icon: TbSql, color: "#FACC15" },
+        { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
+      ],
+    },
+    {
+      title: "Frontend Technologies",
       skills: [
         { name: "React.js", icon: SiReact, color: "#61DAFB" },
-        { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
-        { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
         { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
-       
         { name: "Vite", icon: SiVite, color: "#646CFF" },
       ],
     },
     {
-      title: "Backend",
+      title: "Backend & API Integration",
       skills: [
+        { name: "REST APIs", icon: TbApi, color: "#22D3EE" },
         { name: "Node.js", icon: SiNodedotjs, color: "#68A063" },
         { name: "Express.js", icon: SiExpress, color: "#FFF" },
-        { name: "Python", icon: SiPython, color: "#3776AB" },
       ],
     },
     {
@@ -40,23 +48,33 @@ const Skills = () => {
       skills: [
         { name: "MySQL", icon: SiMysql, color: "#00758F" },
         { name: "PostgreSQL", icon: SiPostgresql, color: "#336791" },
-        { name: "SQL", icon: SiMysql, color: "#FACC15" },
       ],
     },
     {
-      title: "Development Tools",
+      title: "Analytical Tools",
       skills: [
+        { name: "SQL", icon: TbSql, color: "#FACC15" },
+        { name: "Power BI", icon: FaMicrosoft, color: "#F2C811" },
+        { name: "Microsoft Excel", icon: FaFileExcel, color: "#217346" },
+      ],
+    },
+    {
+      title: "Libraries",
+      skills: [
+        { name: "NumPy", icon: SiNumpy, color: "#4DABCF" },
+        { name: "Pandas", icon: SiPandas, color: "#150458" },
+        { name: "Matplotlib", icon: TbChartLine, color: "#FACC15" },
+      ],
+    },
+    {
+      title: "Development & Deployment Tools",
+      skills: [
+        { name: "Git", icon: SiGit, color: "#F05032" },
         { name: "GitHub", icon: SiGithub, color: "#FFF" },
-        { name: "Visual Studio Code", icon: SiGithub, color: "#22D3EE" },
-      ],
-    },
-    {
-      title: "AI & Productivity",
-      skills: [
-        { name: "AI-Assisted Development", icon: BrainCircuit, color: "#22D3EE" },
-        { name: "Prompt Engineering", icon: MessageSquareText, color: "#FACC15" },
-        { name: "AI-Powered Debugging", icon: Bug, color: "#FB7185" },
-        { name: "AI-Assisted Code Optimization", icon: WandSparkles, color: "#A78BFA" },
+        { name: "GitHub Copilot", icon: SiGithubcopilot, color: "#22D3EE" },
+        { name: "Visual Studio Code", icon: TbBrandVscode, color: "#22D3EE" },
+        { name: "MySQL Workbench", icon: SiMysql, color: "#00758F" },
+        { name: "Hostinger", icon: SiHostinger, color: "#A78BFA" },
       ],
     },
   ];
@@ -76,29 +94,39 @@ const Skills = () => {
 
   const additionalSkillGroups = [
     {
-      title: "Analytics",
-      skills: ["Power BI", "Power Query", "Excel"],
-    },
-    {
-      title: "Libraries",
-      skills: ["NumPy", "Pandas", "Matplotlib", "Scikit-learn"],
-    },
-    {
-      title: "Deployment",
-      skills: ["Hostinger", "Vercel"],
-    },
-    {
-      title: "Integrations",
-      skills: ["Razorpay", "WhatsApp"],
-    },
-    {
-      title: "Product & Collaboration",
+      title: "Programming & Frontend",
       skills: [
-        "Product Coordination",
-        "Requirement Gathering",
-        "Feature Planning",
-        "Stakeholder Communication",
-        "Agile Collaboration",
+        "SQL",
+        "TypeScript",
+        "React.js",
+        "Tailwind CSS",
+        "Vite",
+      ],
+    },
+    {
+      title: "Backend, Database & Analytics",
+      skills: [
+        "REST APIs",
+        "Node.js",
+        "Express.js",
+        "MySQL",
+        "PostgreSQL",
+        "Power BI",
+        "Microsoft Excel",
+      ],
+    },
+    {
+      title: "Libraries & Tools",
+      skills: [
+        "NumPy",
+        "Pandas",
+        "Matplotlib",
+        "Git",
+        "GitHub",
+        "GitHub Copilot",
+        "Visual Studio Code",
+        "MySQL Workbench",
+        "Hostinger",
       ],
     },
   ];
@@ -179,7 +207,7 @@ const Skills = () => {
           viewport={{ once: true }}
           className="mt-10 glass-card p-5 sm:p-8 md:mt-16"
         >
-          <h3 className="mb-5 font-display text-lg font-bold text-primary sm:mb-6 sm:text-xl">Additional Skills</h3>
+          <h3 className="mb-5 font-display text-lg font-bold text-primary sm:mb-6 sm:text-xl">Resume Skills Summary</h3>
           <div className="grid gap-6 md:grid-cols-2">
             {additionalSkillGroups.map((group) => (
               <div key={group.title}>

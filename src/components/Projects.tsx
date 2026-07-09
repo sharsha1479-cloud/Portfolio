@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
-import { SiReact, SiTypescript, SiTailwindcss, SiNodedotjs, SiExpress, SiMysql, SiPython, SiVite, SiDjango, SiPostgresql } from "react-icons/si";
+import { SiReact, SiTypescript, SiTailwindcss, SiNodedotjs, SiExpress, SiMysql, SiPython, SiVite, SiDjango, SiPostgresql, SiPandas, SiNumpy, SiScikitlearn } from "react-icons/si";
 import bloodDonorPredictionCover from "../assets/blood-donor-prediction-cover.png";
 import mbrFashionHubCover from "../assets/mbr-fashion-hub-cover.png";
 import nearhubCover from "../assets/nearhub-cover.png";
@@ -36,13 +36,14 @@ const Projects = () => {
     {
       title: "MBR Fashion Hub",
       description:
-        "Full-stack e-commerce fashion website with payment integration, admin dashboard, and order management system.",
+        "Full-stack e-commerce fashion website built with React.js, TypeScript, Tailwind CSS, Vite, Node.js, Express.js, MySQL, Razorpay, Hostinger, and AI-assisted development using GitHub Copilot.",
       image: "bg-gradient-to-br from-pink-500/20 via-purple-500/20 to-blue-500/20",
       features: [
         "User authentication",
         "Product management",
         "Razorpay integration",
         "Hostinger deployment",
+        "GitHub Copilot",
         "Cart & Orders",
       ],
       tech: [
@@ -101,7 +102,7 @@ const Projects = () => {
     {
       title: "Blood Donor Prediction System",
       description:
-        "Machine learning project predicting blood donor return behavior with 84.17% accuracy using behavioral data.",
+        "Machine learning and analytics project predicting blood donor return behavior with 84.17% accuracy using SQL, Power BI, Python, Pandas, NumPy, and Scikit-learn.",
       image: "bg-gradient-to-br from-red-500/20 via-rose-500/20 to-pink-500/20",
       features: [
         "84.17% accuracy",
@@ -109,9 +110,14 @@ const Projects = () => {
         "Data preprocessing",
         "Power BI dashboards",
         "SQL extraction",
+        "Pandas and NumPy",
       ],
       tech: [
         { name: "Python", icon: SiPython },
+        { name: "SQL", icon: SiMysql },
+        { name: "Pandas", icon: SiPandas },
+        { name: "NumPy", icon: SiNumpy },
+        { name: "Scikit-learn", icon: SiScikitlearn },
       ],
       liveLink: "#",
       coverUrl: bloodDonorPredictionCover,
