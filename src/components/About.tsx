@@ -4,13 +4,13 @@ import { CheckCircle } from "lucide-react";
 const About = () => {
   const skills = [
     "React.js, TypeScript, Tailwind CSS",
-    "Node.js, Express.js",
-    "MySQL, PostgreSQL, SQL Workbench",
-    "Python, SQL, Data Analytics",
-    "Power BI, Power Query, Excel",
-    "Razorpay payment integration",
-    "Hostinger deployment",
-    "AI-assisted debugging and optimization",
+    "REST APIs, Node.js, Express.js",
+    "SQL, MySQL, PostgreSQL",
+    "Power BI, Microsoft Excel",
+    "Git, GitHub, GitHub Copilot",
+    "Manual Testing & Quality Assurance",
+    "Business Requirement Analysis",
+    "Product Planning & Stakeholder Collaboration",
   ];
 
   const containerVariants = {
@@ -56,13 +56,25 @@ const About = () => {
             viewport={{ once: true }}
           >
             <p className="mb-5 text-base leading-relaxed text-slate-300 sm:text-lg md:mb-6">
-              I am a B.Tech graduate in Data Science with professional
-              experience as a{" "}
-              <span className="font-semibold text-primary">Software Engineer at Synvide Business Solutions</span>, contributing to product-based web and mobile applications. My experience spans frontend development, backend integrations, testing, deployment workflows, and product coordination.
+              I am a B.Tech graduate in Data Science with over 1 year of
+              professional experience as a Software Engineer and Business
+              Analyst at Synvide Business Solutions, contributing to
+              product-based web and mobile applications. My experience spans
+              frontend development, backend API integrations, manual testing,
+              business requirement analysis, and product delivery.
             </p>
 
             <p className="mb-7 text-base leading-relaxed text-slate-300 sm:text-lg md:mb-8">
-              Over the course of my role, I progressed from frontend-focused development to contributing to product planning, requirement discussions, feature prioritization, stakeholder communication, and development coordination. I build scalable web applications using React.js, TypeScript, Tailwind CSS, Node.js, Express.js, and MySQL, while leveraging AI-assisted development tools to deliver impactful digital products.
+              I began my career as a Frontend Developer, building scalable web
+              applications using React.js, TypeScript, and Tailwind CSS. As I
+              collaborated closely with product teams, I transitioned into a
+              Business Analyst role within the Product Management team, where I
+              gathered business requirements, analyzed business data using SQL,
+              Power BI, and Microsoft Excel, supported product planning, and
+              collaborated with cross-functional stakeholders. I also leverage
+              GitHub Copilot and AI-assisted development tools to improve
+              development efficiency, code quality, and deliver scalable,
+              user-centric, data-driven solutions.
             </p>
 
             {/* Skills Grid */}
