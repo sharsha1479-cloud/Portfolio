@@ -44,6 +44,7 @@ const Footer = () => {
             <ul className="grid grid-cols-2 gap-2 text-sm text-slate-400 sm:block sm:space-y-2">
               {[
                 { name: "About", href: "#about" },
+                { name: "Experience", href: "#experience" },
                 { name: "Education", href: "#education" },
                 { name: "Projects", href: "#projects" },
                 { name: "Contact", href: "#contact" },

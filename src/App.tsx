@@ -30,14 +30,14 @@ function App() {
         {/* About Section */}
         <About />
 
+        {/* Experience Section */}
+        <Experience />
+
         {/* Education Section */}
         <Education />
 
         {/* Skills Section */}
         <Skills />
-
-        {/* Experience Section */}
-        <Experience />
 
         {/* Projects Section */}
         <Projects />
