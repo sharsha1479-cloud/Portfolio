@@ -23,10 +23,10 @@ const Footer = () => {
             viewport={{ once: true }}
           >
             <div className="mb-4 flex items-center gap-2">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-accent via-primary to-secondary">
-                <span className="font-display font-bold text-ink">S</span>
+              <div className="flex h-9 w-9 items-center justify-center rounded-lg border border-cyan-300/20 bg-slate-950">
+                <span className="font-display font-bold text-cyan-200">S</span>
               </div>
-              <span className="font-display text-lg font-bold gradient-text">SHV</span>
+              <span className="font-display text-lg font-bold text-slate-100">SHV</span>
             </div>
             <p className="max-w-sm text-sm leading-relaxed text-slate-400">
               Software Engineer and Business Analyst building scalable, data-driven digital products and business solutions.
@@ -50,7 +50,7 @@ const Footer = () => {
                 { name: "Contact", href: "#contact" },
               ].map((link) => (
                 <li key={link.name}>
-                  <a href={link.href} className="block rounded-lg border border-white/10 bg-white/5 px-3 py-2 transition-colors hover:text-accent sm:border-0 sm:bg-transparent sm:p-0">
+                  <a href={link.href} className="block rounded-lg border border-white/10 bg-white/5 px-3 py-2 transition-colors hover:text-cyan-200 sm:border-0 sm:bg-transparent sm:p-0">
                     {link.name}
                   </a>
                 </li>
@@ -76,7 +76,7 @@ const Footer = () => {
                     href={social.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-slate-400 transition-colors hover:text-primary"
+                    className="text-slate-400 transition-colors hover:text-cyan-200"
                     title={social.label}
                   >
                     <Icon size={24} />
@@ -107,16 +107,16 @@ const Footer = () => {
             viewport={{ once: true }}
             className="text-center text-xs leading-relaxed text-slate-400 sm:text-sm"
           >
-            Built with <span className="font-semibold text-primary">React</span>,{" "}
-            <span className="font-semibold text-accent">TypeScript</span>, and{" "}
-            <span className="font-semibold text-gold">Tailwind CSS</span>
+            Built with <span className="font-semibold text-slate-200">React</span>,{" "}
+            <span className="font-semibold text-slate-200">TypeScript</span>, and{" "}
+            <span className="font-semibold text-slate-200">Tailwind CSS</span>
           </motion.p>
 
           <motion.button
             whileHover={{ scale: 1.1, rotate: 90 }}
             whileTap={{ scale: 0.95 }}
             onClick={scrollToTop}
-            className="glass-effect rounded-lg p-2 text-primary transition-colors hover:text-accent"
+            className="glass-effect rounded-lg p-2 text-slate-300 transition-colors hover:text-cyan-200"
             title="Scroll to top"
           >
             <ChevronUp size={24} />

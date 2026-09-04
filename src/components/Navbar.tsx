@@ -46,11 +46,11 @@ const Navbar = () => {
             onClick={() => scrollToSection("#hero")}
             aria-label="Go to top"
           >
-            <div className="flex h-10 w-10 items-center justify-center rounded-full border border-primary/40 bg-gradient-to-br from-slate-950 via-cyan-950 to-emerald-900 shadow-lg shadow-primary/20 md:h-11 md:w-11">
+            <div className="flex h-10 w-10 items-center justify-center rounded-full border border-cyan-300/25 bg-slate-950 shadow-lg shadow-cyan-950/25 md:h-11 md:w-11">
               <UserRound size={21} className="text-white md:size-[22px]" />
             </div>
             <span className="font-display text-base font-bold text-slate-100 md:text-lg">
-              <span className="md:hidden">Harsha</span>
+              <span className="md:hidden">PORTFOLIO</span>
               <span className="hidden md:inline">Portfolio</span>
             </span>
           </motion.button>
@@ -60,7 +60,7 @@ const Navbar = () => {
             {navItems.map((item) => (
               <motion.button
                 key={item.name}
-                whileHover={{ color: "#a3e635" }}
+                whileHover={{ color: "#67e8f9" }}
                 onClick={() => scrollToSection(item.href)}
                 className="text-sm font-semibold text-slate-300 transition-colors hover:text-accent"
               >
@@ -107,7 +107,7 @@ const Navbar = () => {
             <button
               type="button"
               onClick={() => scrollToSection("#projects")}
-              className="col-span-2 rounded-lg bg-gradient-to-r from-accent via-primary to-secondary px-3 py-2.5 text-center text-sm font-bold text-ink shadow-lg shadow-primary/15"
+              className="col-span-2 rounded-lg bg-cyan-500 px-3 py-2.5 text-center text-sm font-bold text-slate-950 shadow-lg shadow-cyan-950/20 hover:bg-cyan-400"
             >
               View Featured Projects
             </button>
@@ -116,7 +116,7 @@ const Navbar = () => {
                 type="button"
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-left text-sm font-semibold text-slate-300 transition-colors hover:border-primary/40 hover:text-accent"
+                className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-left text-sm font-semibold text-slate-300 transition-colors hover:border-cyan-300/40 hover:text-cyan-200"
               >
                 {item.name}
               </button>

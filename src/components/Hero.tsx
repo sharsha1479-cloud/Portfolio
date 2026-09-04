@@ -131,9 +131,6 @@ const Hero = () => {
               </div>
 
               <div className="min-w-0 text-left">
-                <p className="mb-1 text-xs font-bold uppercase tracking-[0.18em] text-cyan-700">
-                  Portfolio
-                </p>
                 <h1 className="font-display text-[1.85rem] font-extrabold uppercase leading-[0.95] text-slate-950">
                   HARSHA
                   <span className="block">VARDHAN</span>
@@ -152,7 +149,7 @@ const Hero = () => {
             <motion.div variants={itemVariants} className="mb-5 min-h-0 text-center md:mb-7 md:min-h-14 lg:w-full lg:text-center">
               <div className="flex flex-col items-center gap-1.5 text-lg font-bold leading-snug text-slate-800 sm:hidden">
                 <span>Software Engineer</span>
-                <span className="text-cyan-800">Business Analyst</span>
+                <span className="text-slate-600">Business Analyst</span>
               </div>
               <div className="hidden whitespace-nowrap text-lg font-bold leading-snug text-slate-800 sm:inline-block sm:text-xl md:text-2xl">
                 <span>
@@ -196,7 +193,7 @@ const Hero = () => {
             variants={itemVariants}
             className="mb-6 inline-flex items-center justify-center gap-2 rounded-full border border-slate-900/10 bg-white/65 px-3 py-1.5 text-sm font-semibold text-slate-800 shadow-sm shadow-slate-900/5 backdrop-blur-xl sm:text-base md:mb-9 lg:bg-transparent lg:px-0 lg:shadow-none"
           >
-            <BriefcaseBusiness size={16} className="text-cyan-700 lg:hidden" />
+            <BriefcaseBusiness size={16} className="text-slate-700 lg:hidden" />
             Experience: Synvide Business Solutions
           </motion.p>
 
@@ -204,7 +201,7 @@ const Hero = () => {
             <button
               type="button"
               onClick={() => scrollToSection("#projects")}
-              className="col-span-2 inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-slate-950 via-cyan-950 to-slate-900 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-cyan-950/25 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl sm:col-span-1 sm:px-6 sm:text-base"
+              className="col-span-2 inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-slate-950 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-slate-950/20 transition-all duration-300 hover:-translate-y-1 hover:bg-slate-800 hover:shadow-xl sm:col-span-1 sm:px-6 sm:text-base"
             >
               View Projects
               <ArrowUpRight size={18} />
@@ -212,14 +209,14 @@ const Hero = () => {
             <a
               href="/HarshaVardhan_Resume.pdf"
               download
-              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border border-amber-300/80 bg-white px-5 py-3 text-sm font-bold text-amber-700 shadow-lg shadow-amber-950/10 transition-all duration-300 hover:-translate-y-1 hover:border-amber-400 hover:bg-amber-50 hover:shadow-xl sm:px-6 sm:text-base"
+              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border border-slate-300 bg-white px-5 py-3 text-sm font-bold text-slate-800 shadow-lg shadow-slate-950/10 transition-all duration-300 hover:-translate-y-1 hover:border-slate-400 hover:bg-slate-50 hover:shadow-xl sm:px-6 sm:text-base"
             >
               <Download size={18} />
               Resume
             </a>
             <a
               href="mailto:s.harsha1479@gmail.com"
-              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-cyan-600 to-blue-700 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-cyan-950/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl sm:px-6 sm:text-base"
+              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-cyan-700 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-cyan-950/20 transition-all duration-300 hover:-translate-y-1 hover:bg-cyan-600 hover:shadow-xl sm:px-6 sm:text-base"
             >
               <Mail size={18} />
               Email
@@ -247,23 +244,23 @@ const Hero = () => {
               GitHub
             </a>
             <a href="https://linkedin.com/in/saneda-harsha-vardhan" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full border border-slate-900/10 bg-white/70 px-3 py-1 text-sm font-medium text-slate-700 shadow-sm shadow-slate-900/5 backdrop-blur-xl">
-              <FaLinkedin className="text-primary" />
+              <FaLinkedin className="text-cyan-700" />
               LinkedIn
             </a>
             <a href="mailto:s.harsha1479@gmail.com" className="inline-flex items-center gap-2 rounded-full border border-slate-900/10 bg-white/70 px-3 py-1 text-sm font-medium text-slate-700 shadow-sm shadow-slate-900/5 backdrop-blur-xl">
-              <Mail size={16} className="text-primary" />
+              <Mail size={16} className="text-cyan-700" />
               Email
             </a>
             <a href="/HarshaVardhan_Resume.pdf" download className="inline-flex items-center gap-2 rounded-full border border-slate-900/10 bg-white/70 px-3 py-1 text-sm font-medium text-slate-700 shadow-sm shadow-slate-900/5 backdrop-blur-xl">
-              <Download size={16} className="text-accent" />
+              <Download size={16} className="text-slate-700" />
               Resume
             </a>
             <a href="tel:+918186981479" className="inline-flex items-center gap-2 rounded-full border border-slate-900/10 bg-white/70 px-3 py-1 text-sm font-medium text-slate-700 shadow-sm shadow-slate-900/5 backdrop-blur-xl">
-              <Phone size={16} className="text-accent" />
+              <Phone size={16} className="text-slate-700" />
               8186981479
             </a>
             <span className="inline-flex items-center gap-2 rounded-full border border-slate-900/10 bg-white/70 px-3 py-1 text-sm font-medium text-slate-700 shadow-sm shadow-slate-900/5 backdrop-blur-xl">
-              <MapPin size={16} className="text-secondary" />
+              <MapPin size={16} className="text-slate-700" />
               Visakhapatnam, AP
             </span>
           </motion.div>

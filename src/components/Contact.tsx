@@ -55,28 +55,28 @@ const Contact = () => {
       label: "Email",
       value: "s.harsha1479@gmail.com",
       link: "mailto:s.harsha1479@gmail.com",
-      color: "text-primary",
+      color: "text-cyan-300",
     },
     {
       icon: Phone,
       label: "Phone",
       value: "8186981479",
       link: "tel:+918186981479",
-      color: "text-accent",
+      color: "text-cyan-300",
     },
     {
       icon: FaLinkedin,
       label: "LinkedIn",
       value: "saneda-harsha-vardhan",
       link: "https://linkedin.com/in/saneda-harsha-vardhan",
-      color: "text-primary",
+      color: "text-cyan-300",
     },
     {
       icon: MapPin,
       label: "Location",
       value: "Gajuwaka, Visakhapatnam",
       link: "https://maps.google.com/?q=Gajuwaka%2C%20Visakhapatnam%2C%20Andhra%20Pradesh",
-      color: "text-secondary",
+      color: "text-cyan-300",
     },
   ];
 
@@ -124,7 +124,7 @@ const Contact = () => {
             viewport={{ once: true }}
             className="glass-card"
           >
-            <h3 className="mb-5 flex items-center gap-3 font-display text-xl font-bold text-primary sm:mb-6 sm:text-2xl">
+            <h3 className="mb-5 flex items-center gap-3 font-display text-xl font-bold text-slate-100 sm:mb-6 sm:text-2xl">
               <MessageSquare size={24} />
               Send a message
             </h3>
