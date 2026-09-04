@@ -7,10 +7,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#38bdf8",
+        primary: "#0f4c81",
         secondary: "#64748b",
-        accent: "#67e8f9",
-        gold: "#cbd5e1",
+        accent: "#2563eb",
+        gold: "#475569",
         ink: "#07111f",
         dark: {
           50: "#f9fafb",
@@ -50,7 +50,7 @@ export default {
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
-        display: ["Space Grotesk", "Inter", "system-ui", "sans-serif"],
+        display: ["Inter", "system-ui", "sans-serif"],
       },
     },
   },
