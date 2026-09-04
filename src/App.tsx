@@ -17,7 +17,7 @@ function App() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="min-h-screen bg-ink text-white overflow-hidden"
+      className="min-h-screen bg-slate-50 text-slate-950 overflow-hidden"
     >
       {/* Navbar */}
       <Navbar />

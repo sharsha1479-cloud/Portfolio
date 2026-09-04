@@ -34,7 +34,7 @@ const Navbar = () => {
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="fixed top-0 z-50 w-full border-b border-white/10 bg-ink/80 backdrop-blur-xl"
+      className="fixed top-0 z-50 w-full border-b border-slate-200/80 bg-white/85 shadow-sm shadow-slate-900/5 backdrop-blur-xl"
     >
       <div className="container-custom px-4 py-3 md:py-4">
         <div className="flex justify-between items-center">
@@ -49,7 +49,7 @@ const Navbar = () => {
             <div className="flex h-10 w-10 items-center justify-center rounded-full border border-cyan-300/25 bg-slate-950 shadow-lg shadow-cyan-950/25 md:h-11 md:w-11">
               <UserRound size={21} className="text-white md:size-[22px]" />
             </div>
-            <span className="font-display text-base font-bold text-slate-100 md:text-lg">
+            <span className="font-display text-base font-bold text-slate-950 md:text-lg">
               <span className="md:hidden">PORTFOLIO</span>
               <span className="hidden md:inline">Portfolio</span>
             </span>
@@ -62,7 +62,7 @@ const Navbar = () => {
                 key={item.name}
                 whileHover={{ color: "#67e8f9" }}
                 onClick={() => scrollToSection(item.href)}
-                className="text-sm font-semibold text-slate-300 transition-colors hover:text-accent"
+                className="text-sm font-semibold text-slate-700 transition-colors hover:text-cyan-700"
               >
                 {item.name}
               </motion.button>
@@ -86,7 +86,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-primary transition-colors hover:text-accent md:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-800 shadow-sm shadow-slate-900/5 transition-colors hover:text-cyan-700 md:hidden"
             aria-label={isOpen ? "Close menu" : "Open menu"}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -103,7 +103,7 @@ const Navbar = () => {
           transition={{ duration: 0.3 }}
           className="overflow-hidden md:hidden"
         >
-          <div className="mt-3 grid grid-cols-2 gap-2 border-t border-white/10 pt-3">
+          <div className="mt-3 grid grid-cols-2 gap-2 border-t border-slate-200 pt-3">
             <button
               type="button"
               onClick={() => scrollToSection("#projects")}
@@ -116,7 +116,7 @@ const Navbar = () => {
                 type="button"
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-left text-sm font-semibold text-slate-300 transition-colors hover:border-cyan-300/40 hover:text-cyan-200"
+                className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-left text-sm font-semibold text-slate-700 shadow-sm shadow-slate-900/5 transition-colors hover:border-cyan-400 hover:text-cyan-700"
               >
                 {item.name}
               </button>

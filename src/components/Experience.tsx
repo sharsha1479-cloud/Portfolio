@@ -82,7 +82,7 @@ const Experience = () => {
   };
 
   return (
-    <section id="experience" className="section-padding relative">
+    <section id="experience" className="section-dark section-padding relative bg-gradient-to-br from-slate-950 via-slate-900 to-cyan-950">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -136,12 +136,12 @@ const Experience = () => {
                         <h3 className="font-display text-xl font-bold leading-snug text-primary sm:text-2xl">
                           {exp.title}
                         </h3>
-                        <p className="font-semibold text-slate-300">{exp.company}</p>
+                        <p className="font-semibold text-slate-700">{exp.company}</p>
                         <p className="text-sm font-bold text-accent">{exp.period}</p>
                       </div>
                     </div>
 
-                    <p className="mb-5 text-sm leading-relaxed text-slate-300 sm:text-base">{exp.description}</p>
+                    <p className="mb-5 text-sm leading-relaxed text-slate-700 sm:text-base">{exp.description}</p>
 
                     <div className="mb-5">
                       <h4 className="mb-2 text-sm font-semibold text-gold">
@@ -151,7 +151,7 @@ const Experience = () => {
                         {exp.responsibilities.map((resp) => (
                           <li
                             key={resp}
-                            className="flex items-start gap-2 text-sm text-slate-400"
+                            className="flex items-start gap-2 text-sm text-slate-600"
                           >
                             <span className="mt-1 text-accent">-</span>
                             <span>{resp}</span>
@@ -168,18 +168,18 @@ const Experience = () => {
                         <div className="space-y-4">
                           {exp.products.map((product) => (
                             <div key={product.name}>
-                              <p className="text-sm font-semibold text-slate-300">
+                              <p className="text-sm font-semibold text-slate-800">
                                 {product.name}
                               </p>
-                              <p className="text-sm text-slate-400">
+                              <p className="text-sm text-slate-600">
                                 Website: {product.website}
                               </p>
                               {product.androidApp && (
-                                <p className="text-sm text-slate-400">
+                                <p className="text-sm text-slate-600">
                                   Android App: {product.androidApp}
                                 </p>
                               )}
-                              <p className="mt-1 text-sm leading-relaxed text-slate-400">
+                              <p className="mt-1 text-sm leading-relaxed text-slate-600">
                                 {product.description}
                               </p>
                               {product.highlights.length > 0 && (

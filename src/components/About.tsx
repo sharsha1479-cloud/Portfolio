@@ -27,7 +27,7 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="section-padding relative">
+    <section id="about" className="section-padding relative bg-gradient-to-br from-white via-sky-50 to-slate-100">
       <div className="container-custom">
         {/* Section Header */}
         <motion.div
@@ -55,7 +55,7 @@ const About = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <p className="mb-5 text-base leading-relaxed text-slate-300 sm:text-lg md:mb-6">
+            <p className="mb-5 text-base leading-relaxed text-slate-700 sm:text-lg md:mb-6">
               I am a B.Tech graduate in Data Science with over 1 year of
               professional experience as a Software Engineer and Business
               Analyst at Synvide Business Solutions, contributing to
@@ -64,7 +64,7 @@ const About = () => {
               business requirement analysis, and product delivery.
             </p>
 
-            <p className="mb-7 text-base leading-relaxed text-slate-300 sm:text-lg md:mb-8">
+            <p className="mb-7 text-base leading-relaxed text-slate-700 sm:text-lg md:mb-8">
               I began my career as a Frontend Developer, building scalable web
               applications using React.js, TypeScript, and Tailwind CSS. As I
               collaborated closely with product teams, I transitioned into a
@@ -92,7 +92,7 @@ const About = () => {
                   className="flex items-start gap-3"
                 >
                   <CheckCircle size={20} className="flex-shrink-0 text-accent" />
-                  <span className="text-sm leading-relaxed text-slate-300 sm:text-base">{skill}</span>
+                  <span className="text-sm leading-relaxed text-slate-700 sm:text-base">{skill}</span>
                 </motion.div>
               ))}
             </motion.div>
@@ -120,7 +120,7 @@ const About = () => {
                 <h3 className="mb-2 font-display text-2xl font-bold gradient-text sm:text-3xl md:text-4xl">
                   {stat.number}
                 </h3>
-                <p className="text-xs leading-snug text-slate-400 sm:text-sm">{stat.label}</p>
+                <p className="text-xs leading-snug text-slate-600 sm:text-sm">{stat.label}</p>
               </motion.div>
             ))}
           </motion.div>

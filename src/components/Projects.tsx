@@ -139,7 +139,7 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="section-padding relative">
+    <section id="projects" className="section-dark section-padding relative bg-gradient-to-br from-cyan-950 via-slate-950 to-slate-900">
       <div className="container-custom">
         {/* Section Header */}
         <motion.div
@@ -208,7 +208,7 @@ const Projects = () => {
                 <h3 className="mb-2 font-display text-xl font-bold leading-snug text-primary sm:text-2xl">
                   {project.title}
                 </h3>
-                <p className="mb-4 flex-grow text-sm leading-relaxed text-slate-300">
+                <p className="mb-4 flex-grow text-sm leading-relaxed text-slate-700">
                   {project.description}
                 </p>
 
@@ -221,7 +221,7 @@ const Projects = () => {
                       </span>
                     ))}
                     {project.features.length > 3 && (
-                      <span className="skill-badge text-xs text-slate-400">
+                      <span className="skill-badge text-xs text-slate-700">
                         +{project.features.length - 3}
                       </span>
                     )}
@@ -239,7 +239,7 @@ const Projects = () => {
                           whileHover={{ scale: 1.2 }}
                           title={tech.name}
                         >
-                          <TechIcon size={24} className="text-slate-400 transition-colors hover:text-primary" />
+                          <TechIcon size={24} className="text-slate-600 transition-colors hover:text-primary" />
                         </motion.div>
                       );
                     })}
@@ -249,7 +249,7 @@ const Projects = () => {
                 {/* Links */}
                 <div className="flex gap-3">
                   {project.liveLink === "#" ? (
-                    <span className="btn-secondary flex-1 cursor-default text-sm opacity-70">
+                    <span className="btn-secondary flex-1 cursor-default text-sm">
                       Case Study
                     </span>
                   ) : (

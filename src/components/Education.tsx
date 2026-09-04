@@ -27,7 +27,7 @@ const Education = () => {
   ];
 
   return (
-    <section id="education" className="section-padding relative">
+    <section id="education" className="section-padding relative bg-gradient-to-br from-white via-indigo-50 to-sky-50">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -54,15 +54,15 @@ const Education = () => {
               viewport={{ once: true }}
               className="glass-card relative overflow-hidden"
             >
-              <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary via-accent to-secondary" />
-              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/15 text-primary">
+              <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary via-accent to-slate-500" />
+              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-lg bg-slate-900 text-white shadow-md shadow-slate-900/15">
                 {index === 0 ? <GraduationCap size={26} /> : <BookOpen size={24} />}
               </div>
               <p className="mb-2 text-sm font-semibold text-gold">{item.period}</p>
-              <h3 className="font-display text-lg font-bold leading-snug text-white sm:text-xl">{item.school}</h3>
+              <h3 className="font-display text-lg font-bold leading-snug text-slate-950 sm:text-xl">{item.school}</h3>
               <p className="mt-2 font-semibold text-primary">{item.course}</p>
-              <p className="mt-3 text-sm font-bold text-accent">{item.score}</p>
-              <p className="mt-4 text-sm leading-relaxed text-slate-300">{item.detail}</p>
+              <p className="mt-3 text-sm font-bold text-slate-700">{item.score}</p>
+              <p className="mt-4 text-sm leading-relaxed text-slate-700">{item.detail}</p>
             </motion.article>
           ))}
         </div>

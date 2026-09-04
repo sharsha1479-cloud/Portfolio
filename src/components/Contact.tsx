@@ -55,28 +55,28 @@ const Contact = () => {
       label: "Email",
       value: "s.harsha1479@gmail.com",
       link: "mailto:s.harsha1479@gmail.com",
-      color: "text-cyan-300",
+      color: "text-cyan-700",
     },
     {
       icon: Phone,
       label: "Phone",
       value: "8186981479",
       link: "tel:+918186981479",
-      color: "text-cyan-300",
+      color: "text-cyan-700",
     },
     {
       icon: FaLinkedin,
       label: "LinkedIn",
       value: "saneda-harsha-vardhan",
       link: "https://linkedin.com/in/saneda-harsha-vardhan",
-      color: "text-cyan-300",
+      color: "text-cyan-700",
     },
     {
       icon: MapPin,
       label: "Location",
       value: "Gajuwaka, Visakhapatnam",
       link: "https://maps.google.com/?q=Gajuwaka%2C%20Visakhapatnam%2C%20Andhra%20Pradesh",
-      color: "text-cyan-300",
+      color: "text-cyan-700",
     },
   ];
 
@@ -94,7 +94,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="section-padding relative">
+    <section id="contact" className="section-dark section-padding relative bg-gradient-to-br from-slate-950 via-cyan-950 to-slate-900">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -110,7 +110,7 @@ const Contact = () => {
             Get In Touch
           </h2>
           <div className="mt-5 h-1 w-24 bg-gradient-to-r from-primary to-accent" />
-          <p className="mt-5 max-w-2xl text-base leading-relaxed text-slate-300 sm:mt-6 sm:text-lg">
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-slate-700 sm:mt-6 sm:text-lg">
             Open to Software Engineer, Business Analyst, Product Analyst,
             Frontend Developer, and Product-focused Engineering opportunities.
           </p>
@@ -124,7 +124,7 @@ const Contact = () => {
             viewport={{ once: true }}
             className="glass-card"
           >
-            <h3 className="mb-5 flex items-center gap-3 font-display text-xl font-bold text-slate-100 sm:mb-6 sm:text-2xl">
+            <h3 className="mb-5 flex items-center gap-3 font-display text-xl font-bold text-slate-950 sm:mb-6 sm:text-2xl">
               <MessageSquare size={24} />
               Send a message
             </h3>
@@ -135,7 +135,7 @@ const Contact = () => {
                 placeholder="Your Name"
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-slate-500 transition-colors focus:border-primary focus:outline-none sm:text-base"
+                className="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm text-slate-950 placeholder-slate-500 transition-colors focus:border-cyan-500 focus:outline-none sm:text-base"
                 required
               />
 
@@ -145,7 +145,7 @@ const Contact = () => {
                 placeholder="your.email@example.com"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-slate-500 transition-colors focus:border-primary focus:outline-none sm:text-base"
+                className="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm text-slate-950 placeholder-slate-500 transition-colors focus:border-cyan-500 focus:outline-none sm:text-base"
                 required
               />
 
@@ -155,7 +155,7 @@ const Contact = () => {
                 value={formData.message}
                 onChange={handleChange}
                 rows={5}
-                className="w-full resize-none rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-slate-500 transition-colors focus:border-primary focus:outline-none sm:text-base"
+                className="w-full resize-none rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm text-slate-950 placeholder-slate-500 transition-colors focus:border-cyan-500 focus:outline-none sm:text-base"
                 required
               />
 
@@ -209,12 +209,12 @@ const Contact = () => {
                     whileHover={{ x: 10 }}
                     className="glass-card group flex items-center gap-3 sm:gap-4"
                   >
-                    <div className={`flex-shrink-0 rounded-lg bg-white/5 p-3 transition-colors group-hover:bg-white/15 sm:p-4 ${method.color}`}>
+                    <div className={`flex-shrink-0 rounded-lg bg-cyan-50 p-3 transition-colors group-hover:bg-cyan-100 sm:p-4 ${method.color}`}>
                       <Icon size={24} className="sm:size-7" />
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-slate-400">{method.label}</p>
-                      <p className="break-all font-semibold text-white">{method.value}</p>
+                      <p className="text-sm font-medium text-slate-600">{method.label}</p>
+                      <p className="break-all font-semibold text-slate-950">{method.value}</p>
                     </div>
                   </motion.a>
                 );

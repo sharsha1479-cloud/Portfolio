@@ -23,58 +23,58 @@ const Skills = () => {
     {
       title: "Programming Languages",
       skills: [
-        { name: "SQL", icon: TbSql, color: "#FACC15" },
-        { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
+        { name: "SQL", icon: TbSql, color: "#0F4C81" },
+        { name: "TypeScript", icon: SiTypescript, color: "#2563EB" },
       ],
     },
     {
       title: "Frontend Technologies",
       skills: [
-        { name: "React.js", icon: SiReact, color: "#61DAFB" },
-        { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
-        { name: "Vite", icon: SiVite, color: "#646CFF" },
+        { name: "React.js", icon: SiReact, color: "#0EA5E9" },
+        { name: "Tailwind CSS", icon: SiTailwindcss, color: "#0891B2" },
+        { name: "Vite", icon: SiVite, color: "#334155" },
       ],
     },
     {
       title: "Backend & API Integration",
       skills: [
-        { name: "REST APIs", icon: TbApi, color: "#22D3EE" },
-        { name: "Node.js", icon: SiNodedotjs, color: "#68A063" },
-        { name: "Express.js", icon: SiExpress, color: "#FFF" },
+        { name: "REST APIs", icon: TbApi, color: "#0F4C81" },
+        { name: "Node.js", icon: SiNodedotjs, color: "#2563EB" },
+        { name: "Express.js", icon: SiExpress, color: "#334155" },
       ],
     },
     {
       title: "Database",
       skills: [
-        { name: "MySQL", icon: SiMysql, color: "#00758F" },
-        { name: "PostgreSQL", icon: SiPostgresql, color: "#336791" },
+        { name: "MySQL", icon: SiMysql, color: "#0F4C81" },
+        { name: "PostgreSQL", icon: SiPostgresql, color: "#2563EB" },
       ],
     },
     {
       title: "Analytical Tools",
       skills: [
-        { name: "SQL", icon: TbSql, color: "#FACC15" },
-        { name: "Power BI", icon: FaMicrosoft, color: "#F2C811" },
-        { name: "Microsoft Excel", icon: FaFileExcel, color: "#217346" },
+        { name: "SQL", icon: TbSql, color: "#0F4C81" },
+        { name: "Power BI", icon: FaMicrosoft, color: "#2563EB" },
+        { name: "Microsoft Excel", icon: FaFileExcel, color: "#334155" },
       ],
     },
     {
       title: "Libraries",
       skills: [
-        { name: "NumPy", icon: SiNumpy, color: "#4DABCF" },
-        { name: "Pandas", icon: SiPandas, color: "#150458" },
-        { name: "Matplotlib", icon: TbChartLine, color: "#FACC15" },
+        { name: "NumPy", icon: SiNumpy, color: "#0F4C81" },
+        { name: "Pandas", icon: SiPandas, color: "#334155" },
+        { name: "Matplotlib", icon: TbChartLine, color: "#2563EB" },
       ],
     },
     {
       title: "Development & Deployment Tools",
       skills: [
-        { name: "Git", icon: SiGit, color: "#F05032" },
-        { name: "GitHub", icon: SiGithub, color: "#FFF" },
-        { name: "GitHub Copilot", icon: SiGithubcopilot, color: "#22D3EE" },
-        { name: "Visual Studio Code", icon: TbBrandVscode, color: "#22D3EE" },
-        { name: "MySQL Workbench", icon: SiMysql, color: "#00758F" },
-        { name: "Hostinger", icon: SiHostinger, color: "#A78BFA" },
+        { name: "Git", icon: SiGit, color: "#334155" },
+        { name: "GitHub", icon: SiGithub, color: "#0F172A" },
+        { name: "GitHub Copilot", icon: SiGithubcopilot, color: "#0F4C81" },
+        { name: "Visual Studio Code", icon: TbBrandVscode, color: "#2563EB" },
+        { name: "MySQL Workbench", icon: SiMysql, color: "#0F4C81" },
+        { name: "Hostinger", icon: SiHostinger, color: "#334155" },
       ],
     },
   ];
@@ -132,7 +132,7 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="section-padding relative">
+    <section id="skills" className="section-padding relative bg-gradient-to-br from-slate-100 via-white to-cyan-50">
       <div className="container-custom">
         {/* Section Header */}
         <motion.div
@@ -188,7 +188,7 @@ const Skills = () => {
                           className="group-hover:drop-shadow-lg transition-all"
                         />
                       </motion.div>
-                      <p className="text-center text-xs font-semibold leading-snug text-slate-300 transition-colors group-hover:text-primary sm:text-sm">
+                      <p className="text-center text-xs font-semibold leading-snug text-slate-700 transition-colors group-hover:text-cyan-700 sm:text-sm">
                         {skill.name}
                       </p>
                     </motion.div>

@@ -38,26 +38,26 @@ const Hero = () => {
     {
       number: "3+",
       label: "Product Applications",
-      className: "border-cyan-200/80 bg-gradient-to-br from-white via-cyan-50 to-sky-100",
-      numberClass: "text-cyan-700",
+      className: "border-sky-200/80 bg-gradient-to-br from-white via-sky-50 to-blue-100",
+      numberClass: "text-sky-800",
     },
     {
       number: "5+",
       label: "Projects Delivered",
-      className: "border-lime-200/80 bg-gradient-to-br from-white via-lime-50 to-emerald-100",
-      numberClass: "text-emerald-700",
+      className: "border-teal-200/80 bg-gradient-to-br from-white via-teal-50 to-cyan-100",
+      numberClass: "text-teal-800",
     },
     {
       number: "1+",
       label: "Years Experience",
-      className: "border-rose-200/80 bg-gradient-to-br from-white via-rose-50 to-pink-100",
-      numberClass: "text-rose-700",
+      className: "border-slate-200/90 bg-gradient-to-br from-white via-slate-50 to-slate-200",
+      numberClass: "text-slate-800",
     },
     {
       number: "84.17%",
       label: "ML Accuracy",
-      className: "border-amber-200/80 bg-gradient-to-br from-white via-amber-50 to-yellow-100",
-      numberClass: "text-amber-700",
+      className: "border-indigo-200/80 bg-gradient-to-br from-white via-indigo-50 to-sky-100",
+      numberClass: "text-indigo-800",
     },
   ];
 
@@ -96,14 +96,14 @@ const Hero = () => {
       id="hero"
       className="relative flex min-h-screen items-center overflow-hidden px-4 pb-12 pt-20 text-slate-950 sm:px-6 sm:pb-16 md:pt-28 lg:px-8"
     >
-      <div className="absolute inset-0 bg-[linear-gradient(135deg,#f8fafc_0%,#eaf6fb_44%,#dbeafe_100%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_16%_20%,rgba(34,211,238,0.22),transparent_34%),radial-gradient(ellipse_at_84%_18%,rgba(250,204,21,0.18),transparent_28%),radial-gradient(ellipse_at_65%_92%,rgba(251,113,133,0.13),transparent_34%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(135deg,#f8fafc_0%,#e0f2fe_42%,#dbeafe_72%,#f1f5f9_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_16%_20%,rgba(14,165,233,0.2),transparent_34%),radial-gradient(ellipse_at_84%_18%,rgba(15,118,110,0.13),transparent_30%),radial-gradient(ellipse_at_65%_92%,rgba(99,102,241,0.1),transparent_34%)]" />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(15,23,42,0.055)_1px,transparent_1px),linear-gradient(rgba(15,23,42,0.045)_1px,transparent_1px)] bg-[size:96px_96px] opacity-45 [mask-image:linear-gradient(to_bottom,black,transparent_82%)]" />
       <div className="absolute left-1/2 top-0 hidden h-[44rem] w-[44rem] -translate-x-1/2 rounded-full border border-slate-900/10 opacity-50 md:block" />
       <div className="absolute left-1/2 top-20 hidden h-[28rem] w-[28rem] -translate-x-1/2 rounded-full border border-primary/25 opacity-60 md:block" />
       <div className="absolute bottom-0 left-0 right-0 h-56 bg-gradient-to-t from-white/80 via-white/35 to-transparent" />
-      <div className="absolute left-4 top-20 h-28 w-28 rounded-full bg-cyan-300/30 blur-3xl lg:hidden" />
-      <div className="absolute bottom-28 right-0 h-36 w-36 rounded-full bg-rose-300/25 blur-3xl lg:hidden" />
+      <div className="absolute left-4 top-20 h-28 w-28 rounded-full bg-sky-300/30 blur-3xl lg:hidden" />
+      <div className="absolute bottom-28 right-0 h-36 w-36 rounded-full bg-indigo-300/20 blur-3xl lg:hidden" />
       <div className="absolute left-0 right-0 top-24 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
 
       <div className="container-custom relative z-10 grid items-center gap-7 lg:grid-cols-[1.02fr_0.98fr] lg:gap-12">
@@ -143,7 +143,7 @@ const Hero = () => {
               className="relative mb-4 hidden max-w-[12ch] whitespace-normal break-words font-display text-[clamp(2.05rem,12.5vw,4.35rem)] font-extrabold uppercase leading-[0.95] text-slate-950 sm:max-w-none md:mb-5 md:whitespace-nowrap md:text-[clamp(2.35rem,7vw,4.35rem)] lg:inline-block"
             >
               HARSHA VARDHAN
-              <span className="absolute -bottom-2 left-1/2 h-1.5 w-24 -translate-x-1/2 rounded-full bg-gradient-to-r from-cyan-500 to-emerald-500 shadow-lg shadow-cyan-500/25 sm:w-28 lg:left-1 lg:translate-x-0" />
+              <span className="absolute -bottom-2 left-1/2 h-1.5 w-24 -translate-x-1/2 rounded-full bg-gradient-to-r from-sky-700 to-teal-700 shadow-lg shadow-sky-700/20 sm:w-28 lg:left-1 lg:translate-x-0" />
             </motion.h1>
 
             <motion.div variants={itemVariants} className="mb-5 min-h-0 text-center md:mb-7 md:min-h-14 lg:w-full lg:text-center">

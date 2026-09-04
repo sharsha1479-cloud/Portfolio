@@ -31,7 +31,7 @@ const Certifications = () => {
   };
 
   return (
-    <section id="certifications" className="section-padding relative">
+    <section id="certifications" className="section-padding relative bg-gradient-to-br from-white via-teal-50 to-slate-100">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -75,11 +75,11 @@ const Certifications = () => {
                       <h3 className="font-display text-lg font-bold leading-snug text-primary sm:text-xl">
                         {cert.title}
                       </h3>
-                      <p className="text-sm font-semibold text-slate-400">{cert.issuer}</p>
+                      <p className="text-sm font-semibold text-slate-600">{cert.issuer}</p>
                     </div>
                   </div>
 
-                  <p className="mb-5 text-sm leading-relaxed text-slate-300">
+                  <p className="mb-5 text-sm leading-relaxed text-slate-700">
                     {cert.description}
                   </p>
 
@@ -101,7 +101,7 @@ const Certifications = () => {
           className="mt-8 glass-card text-center md:mt-12"
         >
           <Award className="mx-auto mb-4 text-gold" size={28} />
-          <p className="text-slate-300">
+          <p className="text-slate-700">
             These certifications strengthened my knowledge of cloud technologies, data analytics, and business intelligence concepts.          </p>
         </motion.div>
       </div>

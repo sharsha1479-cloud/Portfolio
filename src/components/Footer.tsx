@@ -13,7 +13,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="relative border-t border-white/10 bg-ink/90 backdrop-blur-xl">
+    <footer className="section-dark relative border-t border-white/10 bg-slate-950 backdrop-blur-xl">
       <div className="container-custom px-4 py-10 md:py-12">
         <div className="mb-8 grid gap-7 md:grid-cols-3 md:gap-8">
           <motion.div
@@ -26,9 +26,9 @@ const Footer = () => {
               <div className="flex h-9 w-9 items-center justify-center rounded-lg border border-cyan-300/20 bg-slate-950">
                 <span className="font-display font-bold text-cyan-200">S</span>
               </div>
-              <span className="font-display text-lg font-bold text-slate-100">SHV</span>
+              <span className="font-display text-lg font-bold text-slate-950">SHV</span>
             </div>
-            <p className="max-w-sm text-sm leading-relaxed text-slate-400">
+            <p className="max-w-sm text-sm leading-relaxed text-slate-600">
               Software Engineer and Business Analyst building scalable, data-driven digital products and business solutions.
             </p>
           </motion.div>
@@ -40,8 +40,8 @@ const Footer = () => {
             viewport={{ once: true }}
             className="md:text-center"
           >
-            <h4 className="mb-4 font-semibold text-white">Quick Links</h4>
-            <ul className="grid grid-cols-2 gap-2 text-sm text-slate-400 sm:block sm:space-y-2">
+            <h4 className="mb-4 font-semibold text-slate-950">Quick Links</h4>
+            <ul className="grid grid-cols-2 gap-2 text-sm text-slate-600 sm:block sm:space-y-2">
               {[
                 { name: "About", href: "#about" },
                 { name: "Experience", href: "#experience" },
@@ -50,7 +50,7 @@ const Footer = () => {
                 { name: "Contact", href: "#contact" },
               ].map((link) => (
                 <li key={link.name}>
-                  <a href={link.href} className="block rounded-lg border border-white/10 bg-white/5 px-3 py-2 transition-colors hover:text-cyan-200 sm:border-0 sm:bg-transparent sm:p-0">
+                  <a href={link.href} className="block rounded-lg border border-slate-200 bg-white px-3 py-2 font-bold text-ink transition-colors hover:text-cyan-700 sm:border-0 sm:bg-transparent sm:p-0 sm:text-slate-200">
                     {link.name}
                   </a>
                 </li>
@@ -65,7 +65,7 @@ const Footer = () => {
             viewport={{ once: true }}
             className="md:text-right"
           >
-            <h4 className="mb-4 font-semibold text-white">Connect</h4>
+            <h4 className="mb-4 font-semibold text-slate-950">Connect</h4>
             <div className="flex justify-start gap-4 md:justify-end">
               {socialLinks.map((social) => {
                 const Icon = social.icon;
@@ -76,7 +76,7 @@ const Footer = () => {
                     href={social.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-slate-400 transition-colors hover:text-cyan-200"
+                    className="text-slate-600 transition-colors hover:text-cyan-700"
                     title={social.label}
                   >
                     <Icon size={24} />
@@ -87,7 +87,7 @@ const Footer = () => {
           </motion.div>
         </div>
 
-        <div className="mb-8 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+        <div className="mb-8 h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
 
         <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
           <motion.p
@@ -95,7 +95,7 @@ const Footer = () => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-center text-xs leading-relaxed text-slate-400 sm:text-sm md:text-left"
+            className="text-center text-xs leading-relaxed text-slate-600 sm:text-sm md:text-left"
           >
             Copyright 2026 Saneda Harsha Vardhan. All rights reserved.
           </motion.p>
@@ -105,18 +105,18 @@ const Footer = () => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: true }}
-            className="text-center text-xs leading-relaxed text-slate-400 sm:text-sm"
+            className="text-center text-xs leading-relaxed text-slate-600 sm:text-sm"
           >
-            Built with <span className="font-semibold text-slate-200">React</span>,{" "}
-            <span className="font-semibold text-slate-200">TypeScript</span>, and{" "}
-            <span className="font-semibold text-slate-200">Tailwind CSS</span>
+            Built with <span className="font-semibold text-slate-900">React</span>,{" "}
+            <span className="font-semibold text-slate-900">TypeScript</span>, and{" "}
+            <span className="font-semibold text-slate-900">Tailwind CSS</span>
           </motion.p>
 
           <motion.button
             whileHover={{ scale: 1.1, rotate: 90 }}
             whileTap={{ scale: 0.95 }}
             onClick={scrollToTop}
-            className="glass-effect rounded-lg p-2 text-slate-300 transition-colors hover:text-cyan-200"
+            className="glass-effect rounded-lg p-2 text-slate-700 transition-colors hover:text-cyan-700"
             title="Scroll to top"
           >
             <ChevronUp size={24} />
