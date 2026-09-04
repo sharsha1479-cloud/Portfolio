@@ -75,7 +75,7 @@ const Navbar = () => {
             className="hidden md:block"
           >
             <a
-              href="/resume-harshavardhan.pdf"
+              href="/HarshaVardhan_Resume.pdf"
               className="btn-secondary px-4 py-2 text-sm"
               download
             >
@@ -121,7 +121,7 @@ const Navbar = () => {
                 {item.name}
               </button>
             ))}
-            <a href="/resume-harshavardhan.pdf" download className="btn-secondary col-span-2 w-full text-center text-sm">
+            <a href="/HarshaVardhan_Resume.pdf" download className="btn-secondary col-span-2 w-full text-center text-sm">
               Resume
             </a>
           </div>

@@ -6,7 +6,7 @@ const Experience = () => {
     {
       title: "Software Engineer",
       company: "Synvide Business Solutions",
-      period: "June 2025 - Present",
+      period: "July 2025 - August 2026",
       description:
         "Product-based software engineering and business analysis role across frontend development, backend API integrations, product planning, manual testing, business data analysis, and product delivery.",
       responsibilities: [

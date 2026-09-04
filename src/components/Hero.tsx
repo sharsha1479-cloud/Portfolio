@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowUpRight, BriefcaseBusiness, ChevronDown, Download, Mail, MapPin, Phone } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { useEffect, useState } from "react";
-import profilePortrait from "../assets/profile-portrait.png";
+import profilePortrait from "../assets/WhatsApp Image 2026-09-04 at 5.17.36 PM.jpeg";
 
 const Hero = () => {
   const [displayText, setDisplayText] = useState("");
@@ -210,7 +210,7 @@ const Hero = () => {
               <ArrowUpRight size={18} />
             </button>
             <a
-              href="/resume-harshavardhan.pdf"
+              href="/HarshaVardhan_Resume.pdf"
               download
               className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border border-amber-300/80 bg-white px-5 py-3 text-sm font-bold text-amber-700 shadow-lg shadow-amber-950/10 transition-all duration-300 hover:-translate-y-1 hover:border-amber-400 hover:bg-amber-50 hover:shadow-xl sm:px-6 sm:text-base"
             >
@@ -254,7 +254,7 @@ const Hero = () => {
               <Mail size={16} className="text-primary" />
               Email
             </a>
-            <a href="/resume-harshavardhan.pdf" download className="inline-flex items-center gap-2 rounded-full border border-slate-900/10 bg-white/70 px-3 py-1 text-sm font-medium text-slate-700 shadow-sm shadow-slate-900/5 backdrop-blur-xl">
+            <a href="/HarshaVardhan_Resume.pdf" download className="inline-flex items-center gap-2 rounded-full border border-slate-900/10 bg-white/70 px-3 py-1 text-sm font-medium text-slate-700 shadow-sm shadow-slate-900/5 backdrop-blur-xl">
               <Download size={16} className="text-accent" />
               Resume
             </a>
